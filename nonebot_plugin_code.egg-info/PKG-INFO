@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: nonebot-plugin-code
-Version: 0.0.1
+Version: 0.0.2
 Summary: nonebot2 plugin run code online
 Home-page: https://github.com/yzyyz1387/nonebot_plugin_code
 Author: yzyyz1387
@@ -25,7 +25,10 @@ License-File: LICENSE
 _✨ NoneBot2 在线运行代码<_ ✨_
 
 </div>
-运行于[https://glot.io/](https://glot.io/)
+
+取自某个仓库（但实际我忘了是哪儿了），修改增加了输入功能
+
+运行于 [https://glot.io/](https://glot.io/)
 
 ## 安装💿
 `pip install nonebot-plugin-code`

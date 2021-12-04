@@ -1,3 +1,4 @@
+.gitignore
 LICENSE
 README.md
 setup.py
@@ -6,4 +7,5 @@ nonebot_plugin_code/run.py
 nonebot_plugin_code.egg-info/PKG-INFO
 nonebot_plugin_code.egg-info/SOURCES.txt
 nonebot_plugin_code.egg-info/dependency_links.txt
+nonebot_plugin_code.egg-info/requires.txt
 nonebot_plugin_code.egg-info/top_level.txt
