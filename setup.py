@@ -1,14 +1,17 @@
+import io
+import sys
+
 import setuptools
-import sys,io
-with open("README.md", "r",encoding="utf-8",errors="ignore") as fh:
+
+with open("README.md", "r", encoding="utf-8", errors="ignore") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="nonebot_plugin_code",
-    version="0.0.3",
+    version="0.0.4",
     author="yzyyz1387",
     author_email="youzyyz1384@qq.com",
-    keywords=("pip", "nonebot2", "nonebot", "itnews", "nonebot_plugin"),
+    keywords=("pip", "nonebot2", "nonebot", "nonebot_plugin"),
     description="""nonebot2 plugin run code online""",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -21,9 +24,5 @@ setuptools.setup(
     ],
     include_package_data=True,
     platforms="any",
-    install_requires=["requests","nonebot2>=2.0.0a16"]
+    install_requires=['nonebot-adapter-onebot>=2.0.0-beta.1,<3.0.0', 'nonebot2>=2.0.0-beta.1,<3.0.0', 'httpx>=0.19.0', ]
 )
-
-
-
-
