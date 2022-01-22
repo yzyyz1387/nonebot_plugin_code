@@ -7,7 +7,7 @@
 # @Software: PyCharm
 import re
 
-import requests
+import httpx
 
 codeType = {
     'py': ['python', 'py'],
@@ -57,8 +57,8 @@ async def run(strcode):
         "Authorization": "Token 0123456-789a-bcde-f012-3456789abcde",
         "content-type": "application/"
     }
-
-    res = requests.post(url=f'https://glot.io/run/{codeType[lang][0]}?version=latest', headers=headers, json=dataJson)
+    async with httpx.AsyncClient() as client:
+        res = (await client.post(url=f'https://glot.io/run/{codeType[lang][0]}?version=latest', headers=headers, json=dataJson))
     print(dataJson)
     if res.status_code == 200:
         if res.json()['stdout'] != "":

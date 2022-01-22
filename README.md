@@ -22,7 +22,14 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 在**bot.py** 导入，语句：
 `nonebot.load_plugin("nonebot_plugin_code")`
 
+## 更新
 
+0.0.3
+
+- 适配b1
+- 异步httpx
+
+0.0.2
 
 ## 指令💻
 ```
@@ -49,7 +56,6 @@ code [语言] [-i] [inputText]
 ## 截图🖼
 
 ![](https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot_plugin_code.png)
-
 
 
 
