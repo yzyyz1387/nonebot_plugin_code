@@ -3,6 +3,11 @@
 </p>
 
 <div align="center">
+  
+   
+**你的star是我的动力**  
+**↓**  
+<img src="https://img.shields.io/github/stars/yzyyz1387/nonebot_plugin_code.svg?style=social">  
 
 # 在线运行代码<_ （备考中 可能会更新）
 
