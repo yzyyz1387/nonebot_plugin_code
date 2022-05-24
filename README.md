@@ -54,9 +54,12 @@ code [语言] [-i] [inputText]
 
 **给个star吧~**
 
-其他插件
-[it咨询](https://github.com/yzyyz1387/nonebot_plugin_itnews "it资讯")
-[工作性价比](https://github.com/yzyyz1387/nonebot_plugin_workscore)
+其他插件  
+[简易群管](https://github.com/yzyyz1387/nonebot_plugin_admin)   
+[在线运行代码](https://github.com/yzyyz1387/nonebot_plugin_code)  
+[it咨讯（垃圾插件）](https://github.com/yzyyz1387/nonebot_plugin_itnews "it资讯")  
+[工作性价比（还没更新beta不能用）](https://github.com/yzyyz1387/nonebot_plugin_workscore)  
+[黑丝插件（jsdelivr问题国内服务器不能用）](https://github.com/yzyyz1387/nonebot_plugin_heisi)
 
 ## 截图🖼
 
