@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://v2.nonebot.dev/"><img src="https://raw.githubusercontent.com/nonebot/nonebot2/master/docs/.vuepress/public/logo.png" width="200" height="200" alt="nonebot"></a>
+  <a href="https://v2.nonebot.dev/"><img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot"></a>
 </p>
 
 <div align="center">
 
-# 在线运行代码<_
+# 在线运行代码<_ （备考中 可能会更新）
 
 _✨ NoneBot2 在线运行代码<_ ✨_
 
