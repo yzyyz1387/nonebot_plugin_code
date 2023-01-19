@@ -28,6 +28,11 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 `nonebot.load_plugin("nonebot_plugin_code")`
 
 ## 更新
+0.0.3.1
+- 更新了正则的pattern（应该能完美按预期匹配）
+- 删去命令中的`-i`使其更简洁
+- 完善了返回消息
+- 以合并转发的方式发送返回消息
 
 0.0.3
 
@@ -38,16 +43,14 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 
 ## 指令💻
 ```
-code [语言] [-i] [inputText]
+code [语言] [inputText(空格将被转换为回车)]
 [代码]
-
--i：可选 输入 后跟输入内容
 
 运行代码示例(python)(无输入)：
     code py
         print("sb")
 运行代码示例(python)(有输入)：
-    code py -i 你好
+    code py 你好
         print(input())
 ```
 
@@ -62,7 +65,7 @@ code [语言] [-i] [inputText]
 [黑丝插件（jsdelivr问题国内服务器不能用）](https://github.com/yzyyz1387/nonebot_plugin_heisi)
 
 ## 截图🖼
-
+`尚为旧版本截图`
 ![](https://cdn.jsdelivr.net/gh/yzyyz1387/blogimages/nonebot_plugin_code.png)
 
 
