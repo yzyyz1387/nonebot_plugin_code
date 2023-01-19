@@ -21,6 +21,8 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 
 ## 安装💿
 `pip install nonebot-plugin-code`
+或
+`nb plugin install nonebot-plugin-code`
 
 
 ## 导入📲
