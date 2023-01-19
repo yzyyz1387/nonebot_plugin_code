@@ -1,3 +1,5 @@
 build/
 dist/
 nonebot_plugin_code.egg-info/
+.idea
+.idea/
