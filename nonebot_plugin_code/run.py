@@ -8,7 +8,7 @@
 
 # @Time    : 2023/01/19 21:00
 # @UpdateBy: Limnium
-# 更新了正则的pattern，完善了返回机制，“优化”代码风格。
+
 import re
 import httpx
 
@@ -19,7 +19,7 @@ codeType = {
     'php': ['php', 'php'],
     'js': ['javascript', 'js'],
     'c': ['c', 'c'],
-    'c#': ['csharp', 'cs'],
+    'cs': ['csharp', 'cs'],
     'go': ['go', 'go'],
     'asm': ['assembly', 'asm']
 }
@@ -28,10 +28,11 @@ codeType = {
 async def run(strcode):
     strcode = strcode.replace('&amp;', '&').replace('&#91;', '[').replace('&#93;', ']')
     try:
-        a = re.match(r'(py|php|java|cpp|js|c#|c|go|asm)\b ?(.*)\n((?:.|\n)+)', strcode)
+        # 'c#'似乎不能匹配到，改成'cs'就没问题了，先这样吧
+        a = re.match(r'(py|php|java|cpp|js|cs|c|go|asm)\b ?(.*)\n((?:.|\n)+)', strcode)
         lang, stdin, code = a.group(1), a.group(2).replace(' ', '\n'), a.group(3)
     except:
-        return "输入有误，目前仅支持c/cpp/c#/py/php/go/java/js"
+        return "输入有误，目前仅支持c/cpp/cs/py/php/go/java/js"
     dataJson = {
         "files": [
             {
