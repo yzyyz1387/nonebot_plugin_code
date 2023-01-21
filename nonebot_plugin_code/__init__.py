@@ -22,10 +22,10 @@ async def runcode_body(bot: Bot, event: MessageEvent, arg: Message = CommandArg(
     res = await run(code)
     messages = {"type": "node", "data": {"name": "CodeReturn", "uin": event.get_user_id(), "content": Message(res)}}
     if isinstance(event, GroupMessageEvent):
-        return await bot.call_api("send_group_forward_msg", group_id=event.group_id, messages=messages)
+        await bot.call_api("send_group_forward_msg", group_id=event.group_id, messages=messages)
     else:
-        return await bot.call_api("send_private_forward_msg", user_id=event.user_id, messages=messages)
-
+        await bot.call_api("send_private_forward_msg", user_id=event.user_id, messages=messages)
+    await runcode.finish()
 
 __usage__ = """
 发送
