@@ -30,7 +30,7 @@ async def run(strcode):
     try:
         # 'c#'似乎不能匹配到，改成'cs'就没问题了，先这样吧
         a = re.match(r'(py|php|java|cpp|js|cs|c|go|asm)\b ?(.*)\n((?:.|\n)+)', strcode)
-        lang, stdin, code = a.group(1), a.group(2), a.group(3)
+        lang, stdin, code = a.group(1), a.group(2).replace(' ','\n'), a.group(3)
     except:
         return "输入有误，目前仅支持c/cpp/cs/py/php/go/java/js"
     dataJson = {
