@@ -26,6 +26,11 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 
 ## 更新日志
 
+0.0.6
+ [@Limnium](https://github.com/Limnium)
+- 修复`#`不能被匹配导致c#被误认为c语言运行的问题。请使用`cs`表示`c#`，同样要注意用`cpp`表示`c++`。
+- 解决无输出或报错时合并转发可能无法打开的问题。
+
 0.0.5
  [@Limnium](https://github.com/Limnium)
 - 更新了正则的pattern（应该能完美按预期匹配）
@@ -51,7 +56,7 @@ code [语言] [inputText(空格将被转换为回车)]
 
 运行代码示例(python)(无输入)：
     code py
-        print("sb")
+        print("锑")
 运行代码示例(python)(有输入)：
     code py 你好
         print(input())
