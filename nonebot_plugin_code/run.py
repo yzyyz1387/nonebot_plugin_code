@@ -6,7 +6,7 @@
 # @File    : run.py
 # @Software: PyCharm
 
-# @Time    : 2023/01/19 21:00
+# @Time    : 2023/01/23 17:00
 # @UpdateBy: Limnium
 
 import re
@@ -30,7 +30,7 @@ async def run(strcode):
     try:
         # 'c#'似乎不能匹配到，改成'cs'就没问题了，先这样吧
         a = re.match(r'(py|php|java|cpp|js|cs|c|go|asm)\b ?(.*)\n((?:.|\n)+)', strcode)
-        lang, stdin, code = a.group(1), a.group(2).replace(' ', '\n'), a.group(3)
+        lang, stdin, code = a.group(1), a.group(2), a.group(3)
     except:
         return "输入有误，目前仅支持c/cpp/cs/py/php/go/java/js"
     dataJson = {
@@ -49,6 +49,7 @@ async def run(strcode):
         res = await client.post(url=f'https://glot.io/run/{codeType[lang][0]}?version=latest', headers=headers, json=dataJson)
     if res.status_code == 200:
         res = res.json()
-        return res['stdout']+('\n---\n'+res['stderr'] if res['stderr'] else '')
+        res = res['stdout']+('\n---\n'+res['stderr'] if res['stderr'] else '')
+        return (res if res else '无输出或报错！')
     else:
         return '响应异常'
