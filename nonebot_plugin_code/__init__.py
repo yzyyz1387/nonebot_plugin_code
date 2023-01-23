@@ -6,7 +6,7 @@
 # @File    : __init__.py.py
 # @Software: PyCharm
 
-# @Time    : 2023/01/19 21:00
+# @Time    : 2023/01/23 17:00
 # @UpdateBy: Limnium
 from nonebot import on_command
 from nonebot.params import CommandArg
@@ -37,7 +37,7 @@ code [语言] [stdin(空格将被替换为回车)]
     code py 你好
     print(input())
 
-目前仅支持c/cpp/c#/py/php/go/java/js
+目前仅支持c/cpp/cs/py/php/go/java/js
 运行于：https://glot.io/
 """
 
