@@ -21,17 +21,52 @@ codeType = {
     'c': ['c', 'c'],
     'c#': ['csharp', 'cs'],
     'go': ['go', 'go'],
-    'asm': ['assembly', 'asm']
+    'asm': ['assembly', 'asm'],
+    'ats': ['ats','dats'],
+    'bash': ['bash','sh'],
+    'clisp': ['clisp','lsp'],
+    'clojure': ['clojure','clj'],
+    'cobol': ['cobol','cob'],
+    'coffeescript': ['coffeescript','coffee'],
+    'crystal': ['crystal','cr'],
+    'D': ['D','d'],
+    'elixir': ['elixir','ex'],
+    'elm': ['elm','elm'],
+    'erlang': ['erlang','erl'],
+    'fsharp': ['fsharp','fs'],
+    'groovy': ['groovy','groovy'],
+    'guile': ['guile','scm'],
+    'hare': ['hare','ha'],
+    'haskell': ['haskell','hs'],
+    'idris': ['idris','idr'],
+    'julia': ['julia','jl'],
+    'kotlin': ['kotlin','kt'],
+    'lua': ['lua','lua'],
+    'mercury': ['mercury','m'],
+    'nim': ['nim','nim'],
+    'nix': ['nix','nix'],
+    'ocaml': ['ocaml','ml'],
+    'pascal': ['pascal','pp'],
+    'perl': ['perl','pl'],
+    'raku': ['raku','raku'],
+    'ruby': ['ruby','rb'],
+    'rust': ['rust','rs'],
+    'sac': ['sac','sac'],
+    'scala': ['scala','scala'],
+    'swift': ['swift','swift'],
+    'typescript': ['typescript','ts'],
+    'zig': ['zig','zig'],
+    'plaintext': ['plaintext','txt']
 }
 
 
 async def run(strcode):
     strcode = strcode.replace('&amp;', '&').replace('&#91;', '[').replace('&#93;', ']')
     try:
-        a = re.match(r'(py|php|java|cpp|js|c#|c|go|asm)\b ?(.*)\n((?:.|\n)+)', strcode)
+        a = re.match(r'(py|php|java|cpp|js|c#|c|go|asm|ats|bash|clisp|clojure|cobol|coffeescript|crystal|d|elixir|elm|erlang|fsharp|groovy|guide|hare|haskell|idris|julia|kotlin|lua|mercury|nim|nix|ocaml|pascal|perl|raku|ruby|rust|sac|scala|swift|typescript|zig|plaintext)\b ?(.*)\n((?:.|\n)+)', strcode)
         lang, stdin, code = a.group(1), a.group(2).replace(' ', '\n'), a.group(3)
     except:
-        return "输入有误，目前仅支持c/cpp/c#/py/php/go/java/js"
+        return "输入有误，目前仅支持py/php/java/cpp/js/c#/c/go/asm/ats/bash/clisp/clojure/cobol/coffeescript/crystal/d/elixir/elm/erlang/fsharp/groovy/guide/hare/haskell/idris/julia/kotlin/lua/mercury/nim/nix/ocaml/pascal/perl/raku/ruby/rust/sac/scala/swift/typescript/zig/plaintext"
     dataJson = {
         "files": [
             {
