@@ -13,7 +13,16 @@ from nonebot import on_command
 from nonebot.params import CommandArg
 from nonebot.adapters.onebot.v11 import MessageEvent, Message, Bot, GroupMessageEvent
 from .run import run
+from nonebot.plugin import PluginMetadata
 
+__plugin_meta__ = PluginMetadata(
+    name="在线运行代码",
+    description="在线运行编程代码，语句",
+    usage="eg: code py -i 你好 print(input())",
+    type="application",
+    homepage="https://github.com/yzyyz1387/nonebot_plugin_code",
+    supported_adapters=None,
+)
 runcode = on_command('code', priority=5)
 
 
@@ -26,6 +35,8 @@ async def runcode_body(bot: Bot, event: MessageEvent, arg: Message = CommandArg(
         return await bot.call_api("send_group_forward_msg", group_id=event.group_id, messages=messages)
     else:
         return await bot.call_api("send_private_forward_msg", user_id=event.user_id, messages=messages)
+
+
 
 
 __usage__ = """
