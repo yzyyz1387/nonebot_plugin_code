@@ -25,6 +25,17 @@ _✨ NoneBot2 在线运行代码<_ ✨_
 
 
 ## 更新日志
+0.0.8
+[@snowykami](https://github.com/snowykami)
+- 修复 Message(res) 存在的CQ码注入问题 [#10](https://github.com/yzyyz1387/nonebot_plugin_code/pull/10)
+
+0.0.7
+- 📜 添加 Metadata
+
+0.0.6
+[@ElainaFanBoy](https://github.com/ElainaFanBoy)
+- 适配 glot.io 所有语言 [#7](https://github.com/yzyyz1387/nonebot_plugin_code/pull/7) 
+
 
 0.0.5
  [@Limnium](https://github.com/Limnium)
